@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="author" content="Francisco Briseño">
+        <meta name="keywords" content="desarrollo web, front end, html, css, javascript, diseño web">
+        <meta name="description" content="¡Hola! Soy Paco, desarrollador web y este es mi portafolio.">
+        <!--FUENTES-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <!--ESTILOS-->
+        <link rel="stylesheet" href="../styles/styles.css"/>
+        <link rel="icon" type="image/png" href="../resources/img/flav.png" sizes="16x16">
+        <title>Contacto | Paco Jasso</title>
+    </head>
+    <body>
+
+    <!-- MENU--> 
+	<header class="header">
+        <nav>
+            <div class="menu">
+                <div class="brand">
+                    <a href="../index.html"><img src="../resources/img/logo-bco.png" alt="Logo" title="Logo"/></a>
+                </div>
+                <div class="links">
+                    <ul>
+				        <li><a href="../index.html">Inicio</a></li>
+				        <li><a href="servicios.html">Servicios</a></li>
+				        <li><a href="sobre_mi.html">Sobre Mí</a></li>
+				        <li><a href="portafolio.html">Portafolio</a></li>
+				        <li><a href="#" class="active">Contacto</a></li>
+			        </ul>
+                </div>
+            </div>
+            <div class="call">
+                <button class="llamada"><a href="tel:5579086889">llámame</i></a></button>
+            </div>
+        </nav>
+	</header>
+
+    <!--ENCABEZADO CONTACTO-->
+    <section class="grid">
+        <div class="hero-image">
+            <div class="titulo">
+                <div class="typewriter">
+                    <h1>CONTACTO</h1>
+                    <p>Elige cualquiera de los canales que hay disponibles para que estemos en contacto y cuéntame sobre tu proyecto. ¡Será un placer escucharte!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--CUERPO CONTACTO-->
+    <section class="section-contacto">
+        <div class="titulo-contacto">
+            <h2>Me encantará escucharte</h2>
+            <p>Deja tus datos en el formulario o selecciona el medio de contacto que más te acomode. </br>(Prueba dándo click en el teléfono para ver qué pasa)</p>
+        </div>
+        <!--FORMULARIO-->
+        <div class="contenedor-contacto">
+            <div class="formulario">
+                <form class="contact_form">
+                    <p><label>Nombre</label><input type="text" name="name" placeholder="Nombre" required></p>
+                    <p><label>Teléfono</label><input type="tel" name="phone" placeholder="Teléfono" required></p>
+                    <p><label>E-mail</label><input type="email" name="email" placeholder="E-mail" required></p>
+                    <p><span>¿Qué servicio te interesa?</span></p>
+                    <p><input type="checkbox" id="servicio1" name="servicio1" value="disenoweb">
+                    <label for="servicio1"> Diseño Web</label></p>
+                    <p><input type="checkbox" id="servicio2" name="servicio2" value="desarrollofrontend">
+                    <label for="servicio2"> Desarrollo Front-End</label></p>
+                    <p><input type="checkbox" id="servicio3" name="servicio3" value="desarrollowordpress">
+                    <label for="servicio3"> Desarrollo Wordpress</label></p>
+                    <p><textarea name="message" cols="80" rows="8" placeholder="Escribe aquí tu mensaje..." required></textarea></p>
+                    <p><input type="submit" value="Enviar"></p>
+                </form>
+            </div>
+            <div class="contacto">
+                <ul>
+                    <li><a href="tel:5579086889">55 7908 6889</a></li>
+                    <li><a href="mailto:pacobabilonia@gmail.com">pacobabilonia@gmail.com</a></li>
+                    <li><a href="https://wa.me/+525562356255" target="_blank">WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+        <divi class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21285.219853053273!2d-99.14303591567231!3d19.424032893292715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2sCiudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1658437365439!5m2!1ses-419!2smx" width="1920" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </divi>
+    </section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="up-btn">
+        <a href="#top" class="btn-u">UP</a>
+    </div>
+<div class="contenedor-footer">
+    <div class="logofooter">
+        <img src="../resources/img/logo.png" alt="Paco" title="Paco"/>
+    </div>
+    <div class="company-footer">
+        <h3>Diseño Estratégico</h3>
+        <h2>Un código limpio vale más que mil palabras.</h2>
+        <p>Hola, llevo más de 3 años de experiencia diseñando páginas web. Domino herramientas de  maquetación, wordpress, diseño Front-end y Diseño UX para ofrecer una mejor experiencia y servicio en tu proyecto.</p>
+    </div>
+    <div class="linksfoofter">
+        <h3>Link a mis redes sociales</h3>
+            <!--Estos items serán enlaces a href, pero por el momento se enlistan en lo que se sabe qué enlaces irán-->
+            <ul class="linklist">
+                <li><a href="https://facebook.com/pacobabilonia" target="_blank">Facebook</a></li>
+                <li><a href="https://finstagram.com/pacobabilonia" target="_blank">Instagram</a></li>
+                <li><a href="https://linkedin.com/paco-babilonia" target="_blank">LinkedIn</a></li>
+            </ul>
+    </div>
+    <div class="linksfoofter2">
+        <h3>Enlaces Importantes</h3>
+            <!--Estos items serán enlaces a href, pero por el momento se enlistan en lo que se sabe qué enlaces irán-->
+            <ul class="linklist">
+                <li><a href="pages/portafolio.html">Portafolio</a></li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
+                <li><a href="https://w2link.com">Blog</a></li>
+            </ul>
+    </div>
+</div>
+<div class="copyright">
+        <p>© Copyright 2022 Francisco Briseño. All Rights Reserved.</p>
+</div>
+</footer>
+</body>
+</html>
