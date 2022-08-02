@@ -744,7 +744,7 @@ p {
 }
 .contact_form input[type='text'], .contact_form textarea{
     padding: 7px 6px;
-    width: 90%;
+    width: 95%;
     border: 1px solid #bdbdbd;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     resize: none;
@@ -758,7 +758,7 @@ p {
 
 .contact_form input[type='tel'], .contact_form textarea{
     padding: 7px 6px;
-    width: 90%;
+    width: 95%;
     border: 1px solid #bdbdbd;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     resize: none;
@@ -772,7 +772,7 @@ p {
 
 .contact_form input[type='email'], .contact_form textarea{
     padding: 7px 6px;
-    width: 90%;
+    width: 95%;
     border: 1px solid #bdbdbd;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     resize: none;
