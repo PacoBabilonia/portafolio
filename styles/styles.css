@@ -315,8 +315,13 @@ p {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
     flex-direction: column;
-
+    transition: 0.3s;
 }
+
+.serv-card:hover {
+    transform: translateY(-10px);
+}
+
 
 
 .icono-card {
@@ -472,9 +477,9 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #00bcd4;
+    background-image: linear-gradient(to bottom, #0097a7 0%, #00bcd4 50%, #b2ebf2 100%);
     opacity: 0;
-    transition: .4s;
+    transition: .5s;
 }
 
 
