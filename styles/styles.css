@@ -906,17 +906,20 @@ p {
 
     .hero-section {
         flex-direction: column;
-        width: 70%;
-        margin-left: 0px;
+        width: 80%;
+        margin:auto
     }
 
     .titulo-principal {
-        font-size: 40px;
+        font-size: 45px;
         text-align: center;
+        text-shadow: 3px 3px 0px #00bcd4;
     }
     
     .titulo-principal span {
-        font-size: 40px;
+        font-size: 45px;
+        margin:0;
+        text-shadow: 3px 3px 0px #fff;
     }
 
    
