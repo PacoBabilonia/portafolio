@@ -901,7 +901,7 @@ p {
     /*Hero*/
 
     .hero-content {
-        height:700px;
+        height:680px;
         justify-content: center;
     }
     
@@ -912,7 +912,9 @@ p {
     .hero-section {
         flex-direction: column;
         width: 80%;
-        margin:auto
+        margin:auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 
     .titulo-principal {
