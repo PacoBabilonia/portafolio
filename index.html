@@ -23,24 +23,37 @@
 
     <!--Menu-->
     <header>
-        <nav class="menu-content">
-            <div class="main-menu">
-                <div class="logo-menu">
-                    <a href="index.html"><img src="resources/img/logo.png" alt="Logo" title="Logo"/></a>
-                </div>
-                <div class="links-menu">
-                    <ul class="menu-items">
-				        <li class="menu-item"><a href="#" class="active">Inicio</a></li>
-				        <li class="menu-item"><a href="pages/servicios.html">Servicios</a></li>
-				        <li class="menu-item"><a href="pages/sobre_mi.html">Sobre Mí</a></li>
-				        <li class="menu-item"><a href="pages/portafolio.html">Portafolio</a></li>
-				        <li class="menu-item"><a href="pages/contacto.html">Contacto</a></li>
-			        </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="resources/img/logo.png" title="logo" alt="logo" width="120px"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/sobre_mi.html">Sobre Mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/portafolio.html">Portafolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
-	</header>
-
+    </header>
+        
 <!-- Encabezado-->
     <section class="hero-content">
         <div class="hero-section">
@@ -71,7 +84,7 @@
             <div class="contenedor-cards">
                 <div class="serv-card card1">
                     <div class="textos">
-                        <h3 class="h3">Front-End</h3>
+                        <h3 class="h3">Front-End <span class="badge rounded-pill text-bg-danger">New</span></h3>
                         <p>HTML, CSS y javascript</p>
                     </div>
                     <div class="icono-card">
