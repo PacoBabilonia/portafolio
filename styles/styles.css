@@ -604,9 +604,7 @@ p {
     flex-grow:0;
     flex-shrink:1;
     justify-content: center;
-    justify-items: center;
     align-items: center;
-    align-content: center;
     display: flex;
 }
 
@@ -974,11 +972,18 @@ p {
     .titulo-hero h1 {
         text-align: center;
     }
+
+    .btn1 {
+        font-size: 14px;
+    }
     
     .btn1-content {
 
         justify-content:center;
     } 
+    .btn2 {
+        font-size: 14px;
+    }
 
         /*Servicios*/
 
