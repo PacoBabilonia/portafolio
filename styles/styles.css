@@ -985,6 +985,10 @@ p {
         font-size: 14px;
     }
 
+    .btn-cta .btn1,.btn2 {
+        padding: 10px 20px;
+    }
+
         /*Servicios*/
 
     .main-content {
