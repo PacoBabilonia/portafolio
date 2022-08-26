@@ -11,6 +11,11 @@ $gris: #757575;
 $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 $shadow2: #b2ebf2(208, 212, 206, 0.24) 0px 3px 8px;
 $pattern: url(../resources/img/ignasi_pattern_s.png);
+$mobile: 767px;
+$tabletmin: 768px;
+$tabletmax: 999px;
+$lapmin: 1000px;
+$lapmax: 1200px;
 
 @mixin flexible($dis, $direction, $just,){
     display: $dis;
@@ -78,6 +83,22 @@ p {
         @include estilotexto(70px,$cian,bolder,$txt1,left);
         margin: 10px;
         text-shadow: 4px 4px 0px #fff;
+
+        @media(max-width: $mobile){
+            font-size: 45px;
+            margin:0;
+            text-shadow: 3px 3px 0px #fff;
+
+            @media(min-width: $tabletmin) and (max-width: $tabletmax){
+                font-size: 70px;
+            }
+        }
+    }
+
+    @media(max-width: $mobile){
+        font-size: 45px;
+        text-align: center;
+        text-shadow: 3px 3px 0px #00bcd4;
     }
 }
 
@@ -98,6 +119,9 @@ p {
         color: #ffffff;
     }
 
+    @media(max-width: $mobile){
+        font-size: 14px;
+    }
 }
 
 
@@ -108,6 +132,10 @@ p {
 
     &:hover{
         color: $negro;
+    }
+
+    @media(max-width: $mobile){
+        font-size: 14px;
     }
 }
 
@@ -121,6 +149,16 @@ p {
     padding: 0;
     margin: 0;
     height:800px;
+
+    @media(max-width: $mobile){
+        height:680px;
+        justify-content: center;
+    }
+
+    @media(min-width: $tabletmin) and (max-width: $tabletmax){
+        height:850px;
+        justify-content: center;
+    }
 }
 
 .hero-section {
@@ -128,20 +166,53 @@ p {
     width: 50%;
     margin-left: 100px;
     row-gap: 30px;
+
+    @media(max-width: $mobile){
+        flex-direction: column;
+        width: 80%;
+        margin:auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    @media(min-width: $tabletmin) and (max-width: $tabletmax){
+        flex-direction: column;
+        width: 70%;
+        margin-left: 0px;
+    }
 }
 
 .titulo-hero h1 {
     line-height: 1.2em;
     margin-bottom: 0;
     text-align: left;
-    color:#ffffff
+    color:#ffffff;
+
+    @media(max-width: $mobile){
+        text-align: center;
+    }
+
+    @media(min-width: $tabletmin) and (max-width: $tabletmax){
+        text-align: center;
+    }
 }
 
 .sub-hero p {
     @include flexible(flex, column, left);
     @include estilotexto(29px,$naranja,bolder,$txt2,left);
     margin: 10px;
-  
+    
+    @media(max-width: $mobile){
+        justify-content: center;
+        font-size:27px;
+        text-align: center; 
+    }
+
+    @media(min-width: $tabletmin) and (max-width: $tabletmax){
+        justify-content: center;
+        font-size:35px;
+        text-align: center;
+    }
 }
 
 .btn1-content {
@@ -152,6 +223,14 @@ p {
         padding: 15px 60px;
         margin-top: 15px;
     } 
+
+    @media(max-width: $mobile){
+        justify-content: center;
+    }
+
+    @media(min-width: $tabletmin) and (max-width: $tabletmax){
+        justify-content: center;
+    }
 }
 
 .img-hero {
@@ -161,6 +240,14 @@ p {
     img {
         width: 100%;
     }
+
+    @media(max-width: $mobile){
+        display: none;
+    }
+
+    @media(min-width: $tabletmin) and (max-width: $tabletmax){
+        display: none;
+    }
 }
 
 /*Servicios*/
@@ -169,11 +256,26 @@ p {
     @include flexible(flex,column,center);
     padding: 120px 0px 0px;
     background-image: $pattern;
+
+    @media(max-width: $mobile){
+        margin: 0;
+        padding: 60px 0px 0px;
+    }
 }
 
-.servicios-head .h2 {
-    margin-left: 110px;
-    width: 60%;
+.servicios-head {
+    .h2{
+        margin-left: 110px;
+        width: 60%;
+    
+        @media(max-width: $mobile){
+            font-size: 40px;
+            width: 85%;
+            margin: 20px;
+            text-align: center;
+            border-bottom: none; 
+        }  
+    }
 }
 
 
@@ -184,6 +286,12 @@ p {
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 20px;
+
+    @media(max-width: $mobile) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 1fr;
+        padding-bottom: 0px;
+    }
 }
 
 .servicios-cta{
@@ -211,6 +319,13 @@ p {
     .btn1-content {
         justify-content: center;
     }   
+
+    @media(max-width: $mobile){
+        border-radius: 10px;
+        text-align: left;
+        padding: 20px;
+        gap: 20px;
+    }
 }
 
 
@@ -218,6 +333,12 @@ p {
     p{
         @include estilotexto(29px,$gris,bolder,$txt2,left);
         margin-left: 300px;
+
+        @media(max-width: $mobile){
+            font-size: 23px;
+            margin-left: 0px;
+            text-align: center;
+        }
     }
 
     h3{
@@ -249,16 +370,30 @@ p {
 	display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+
+    @media(max-width: $mobile){
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
 }
 
 .serv-card {
-    @include flexible(flex,column,center);
+    @include flexible(flex,column,space-around);
 	border-radius: 10px;
 	min-height: 200px;
     background-color: #ffffff;
 	padding: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: 0.3s;
+    gap:20px;
+
+    & h3{
+        font-size: 22px;
+    }
+
+    & p{
+        font-size: 16px;
+    }
 
     &:hover {
         transform: translateY(-10px);
@@ -278,18 +413,36 @@ p {
     background-image: $pattern;
     height: 100%;
     padding: 70px 15px;
+
+    @media(max-width: $mobile){
+        flex-direction: column; 
+        gap: 30px;
+    }
 }
 
 .contenidopv1 { 
     width: 50%;
     align-self:auto;
 
+    @media(max-width: $mobile){
+        width: 100%;
+    }
+
     p {
         text-align: left;
+
+        @media(max-width: $mobile){
+            text-align: center;
+            margin-bottom: 40px;
+        }
     }
 
     h2 {
         text-align: left;
+
+        @media(max-width: $mobile){
+            text-align: center;
+        }
     }
 
     li {
@@ -298,14 +451,26 @@ p {
         margin-left: 50px;
         color: $gris;
         font-weight: normal;
-        font-family: $txt2;
+        font-family: $txt1;
         list-style:square;
+
+        @media(max-width: $mobile){
+            line-height: 30px;
+            font-size: 22px;
+            color: $gris;
+            font-family: $txt1;
+        }
     }
+
 }
 
 .imgpv1 {
     margin-top: 20px;
     align-self:auto;
+
+    @media(max-width: $mobile){
+        text-align: center;
+    }
 }
 
 
@@ -319,6 +484,12 @@ p {
     padding: 70px 15px 0px;
     gap: 30px;
     background-image: $pattern;
+
+    @media(max-width: $mobile){
+        flex-direction: column; 
+        gap: 30px;
+        padding-top: 20px;
+    }
 }
 
 
@@ -329,12 +500,26 @@ p {
     flex-shrink:1;
     align-self:auto;
 
+    @media(max-width: $mobile){
+        width: 100%;
+        order:1;
+    }
+
     p {
         text-align: left;
+
+        @media(max-width: $mobile){
+            text-align: center;
+            margin-bottom: 40px;
+        }
     }
 
     h2 {
         text-align: left;
+
+        @media(max-width: $mobile){
+            text-align: center;
+        }
     }
 
     li {
@@ -343,9 +528,18 @@ p {
         margin-left: 50px;
         color: $gris;
         font-weight: normal;
-        font-family: $txt2;
+        font-family: $txt1;
         list-style:square;
-    
+
+        @media(max-width: $mobile){
+            line-height: 30px;
+            font-size: 22px;
+            margin-left: 50px;
+            color: $gris;
+            font-weight: normal;
+            font-family: $txt1;
+            list-style:square;
+        }
     }
 }
 
@@ -355,9 +549,15 @@ p {
     flex-shrink:1;
     align-self:auto;
     margin-top: 20px;
+
+    @media(max-width: $mobile){
+        text-align: center;
+        order: 0;
+    }
 }
 
 /*Portafolio*/
+
 
 .portafolio-content {
     display: grid;
@@ -367,12 +567,26 @@ p {
     width: 90%;
 	margin: 65px auto 0px;
 	padding: 40px 0;
+
+    @media(max-width: $mobile){
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 1fr;
+        padding-bottom: 0px;
+        margin-top: 20px;
+        gap:30px; 
+    }
 }
 
 .contenedor-cards2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap:20px
+    gap:20px;
+
+    @media(max-width: $mobile){
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 40px;
+    }
 }
 
 
@@ -380,10 +594,20 @@ p {
 
     .portafolio-content {
         grid-template-columns: 1fr;
+
+        @media(max-width: $mobile){
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            padding-bottom: 60px;
+        }
     }
 
     .contenedor-cards2 {
         grid-template-columns: repeat(4,1fr);
+
+        @media(max-width: $mobile){
+            grid-template-columns: 1fr;
+        }
     }
 }
 
@@ -473,6 +697,11 @@ p {
     padding-bottom: 70px;
     column-gap: 30px;
 
+    @media(max-width: $mobile){
+        flex-direction: column;
+        row-gap: 30px; 
+    }
+
     q {
         @include estilotexto(18px,$negro,normal,$txt1,center);
         font-style: italic;
@@ -489,6 +718,15 @@ p {
     padding: 45px 35px;
     gap: 5px;
     background-color: $negro;
+
+    @media(max-width: $mobile){
+        flex-direction: column; 
+        height: 100%;
+        padding: 60px 0px;
+        margin: auto;
+        gap: 5px;
+        background-color: $negro;
+    }
 }
 
 .texto-cta { 
@@ -498,14 +736,30 @@ p {
     flex-shrink:1;
     align-self:auto;
 
+    @media(max-width: $mobile){
+        order:0;
+        width: 80%;
+        margin: auto;
+    }
+
     h2 {
         padding-top: 10px;
         margin-top: 10px;
         color: #fff;
+
+        @media(max-width: $mobile){
+            text-align: center;
+            margin: 0;
+            font-size: 35px;
+        }
     }
 
     p {
         @include estilotexto(30px,$naranja,normal,$txt2,center);
+
+        @media(max-width: $mobile){
+            font-size: 20px;
+        }
     }   
 }
 
@@ -517,8 +771,17 @@ p {
     flex-grow:0;
     flex-shrink:1;
 
+    @media(max-width: $mobile){
+        width: 90%;
+        margin: auto;
+    }
+
     .btn1,.btn2 {
         padding: 10px 30px;
+
+        @media(max-width: $mobile){
+            padding: 10px 20px;
+        }
     }
 }
 
@@ -559,6 +822,11 @@ p {
     height: 100%;
     padding: 0px 35px;
     gap: 15px;
+
+    @media(max-width: $mobile){
+        flex-direction: column;
+        margin: auto;
+    }
 }
 
 .logofooter {
@@ -575,11 +843,21 @@ p {
     width: 40%;
     margin: auto;
 
+    @media(max-width: $mobile){
+        width: 90%;
+        margin: auto;
+        border-right: none;
+    }
+
     .h2 {
         font-size: 20px;
         text-align: left;
         margin-top: 0; 
         padding: 0;
+
+        @media(max-width: $mobile){
+            text-align: center;
+        }
     }
 
     h3{
@@ -591,6 +869,10 @@ p {
     p {
         font-size: 13px;
         text-align: left;
+
+        @media(max-width: $mobile){
+        text-align: center;
+        }
     }
 }
 
@@ -622,8 +904,17 @@ p {
     width: 25%;
     margin: auto;
 
+    @media(max-width: $mobile){
+        width: 90%;
+        margin: auto; 
+    }
+
     .h3 {
         color: $naranja;
+
+        @media(max-width: $mobile){
+        font-size: 22px;
+        }
     }
 }
 
@@ -637,6 +928,10 @@ p {
     height: 100%;
     padding: 0px 35px;
     gap: 15px;
+
+    @media(max-width: $mobile){
+        flex-direction: column-reverse;
+    }
 }
 
 .contacto {
@@ -644,6 +939,13 @@ p {
     row-gap: 10px;
     width: 30%;
     margin: auto;
+
+    @media(max-width: $mobile){
+        padding-top: 50px;
+        width: 90%;
+        margin: auto;
+        gap: 30px;
+    }
 }
 
 
@@ -704,16 +1006,24 @@ p {
 
     .p-contacto {
         @include estilotexto(29px,$gris,bolder,$txt2,left);
+
+        @media(max-width: $mobile){
+        font-size: 18px;
+        }
     }
 
     .serv-card img {
         width: 75px;
+
+        @media(max-width: $mobile){
+            width: 60px;
+        }
     }
 }
 
 .mapa {
     display: flex;
-    margin: 0;
+    margin-top: 30px;
     padding: 0;
     flex: 1;
     background-color: #e2e2e2;
@@ -732,6 +1042,11 @@ p {
 #sobre-mi {
     .servicios-cta {
         justify-content: center;
+
+        @media(max-width: $mobile){
+            justify-content: center;
+            margin: auto;
+        }
     }
 
     .icono-card {
@@ -767,11 +1082,25 @@ p {
     .servicios-content {
         display: grid;
         grid-template-columns: 1fr 3fr ;
+
+        @media(max-width: $mobile){
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: .8fr 3fr;
+            padding: 0;
+            margin: 0px auto;
+        }
     }
 
     .contenedor-cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+
+        @media(max-width: $mobile){
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
     
     }
 
@@ -791,735 +1120,3 @@ p {
     }
 }
 
-
-
-/*------------Querys-----------------------*/
-
-@media(max-width: 767px) {
-
-    /*Hero*/
-
-    .hero-content {
-        height:680px;
-        justify-content: center;
-    }
-    
-    .img-hero {
-        display: none;
-    }
-
-    .hero-section {
-        flex-direction: column;
-        width: 80%;
-        margin:auto;
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-
-    .titulo-principal {
-        font-size: 45px;
-        text-align: center;
-        text-shadow: 3px 3px 0px #00bcd4;
-    }
-    
-    .titulo-principal span {
-        font-size: 45px;
-        margin:0;
-        text-shadow: 3px 3px 0px #fff;
-    }
-
-   
-    .sub-hero p {
-        justify-content: center;
-        font-size:27px;
-        text-align: center;
-    }
-
-    .titulo-hero h1 {
-        text-align: center;
-    }
-
-    .btn1 {
-        font-size: 14px;
-    }
-    
-    .btn1-content {
-
-        justify-content:center;
-    } 
-    .btn2 {
-        font-size: 14px;
-    }
-
-    .btn-cta .btn1,.btn2 {
-        padding: 10px 20px;
-    }
-
-        /*Servicios*/
-
-    .main-content {
-        margin: 0px 0px;
-        padding: 60px 0px 0px;
-    }
-
-    .servicios-head .h2 {
-        font-size: 40px;
-        width: 85%;
-        margin: 20px;
-        text-align: center;
-        border-bottom: none;
-    }      
-
-    .servicios-head p {
-        font-size: 23px;
-        margin-left: 0px;
-        text-align: center;
-    }
-    
-    .servicios-content {
-        grid-template-columns: 1fr;
-        grid-template-rows: 3fr 1fr;
-        padding-bottom: 0px;
-    }
-
-    .contenedor-cards {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 1fr);
-    }
-
-    .servicios-cta{
-        border-radius: 10px;
-        text-align: left;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .servicios-content {
-        grid-template-columns: 1fr;
-        grid-template-rows: 3fr 1fr;
-        padding-bottom: 0px;
-    }
-
-
-    /*PV1*/
-
-    .propuesta1 {
-        flex-direction: column; 
-        justify-content: center;
-        gap: 30px;
-    }
-
-        
-    .imgpv1 {
-        text-align: center;
-    }
-
-    .contenidopv1 { 
-        width: 100%;
-  
-    }
-
-    
-    .contenidopv1 h2 {
-        text-align: center;
-    }
-
-    .contenidopv1 p {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    
-        
-    .contenidopv1 li {
-        line-height: 30px;
-        font-size: 22px;
-        color: #757575;
-        font-family: 'Shadows Into Light', cursive;
-
-    }
-
-    /*PV2*/
-
-    .propuesta2 {
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        gap: 30px;
-        padding-top: 20px;
-    }
-
-        
-    .imgpv2 {
-        text-align: center;
-        order: 0;
-    }
-
-    .contenidopv2 { 
-        width: 100%;
-        order:1;
-  
-    }
-
-    
-    .contenidopv2 h2 {
-        text-align: center;
-    }
-
-    .contenidopv2 p {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-      
-    .contenidopv2 li {
-        line-height: 30px;
-        font-size: 22px;
-        margin-left: 50px;
-        color: #757575;
-        font-weight: normal;
-        font-family: 'Shadows Into Light', cursive;
-        list-style:square;
-    }
-
-
-    /*Portafolio 480 767*/
-
-     .portafolio-content {
-        grid-template-columns: 1fr;
-        grid-template-rows: 3fr 1fr;
-        padding-bottom: 0px;
-        margin-top: 20px;
-        gap:30px;
-    }
-
-    #portafoliopage .portafolio-content {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        padding-bottom: 60px;
-    }
-
-    #portafoliopage .contenedor-cards2 {
-        grid-template-columns: 1fr;
-    }
-
-    .contenedor-cards2 {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        gap: 40px;
-    }  
-
-    /*Testimoniales 480 767*/
-
-    .test2 {
-        flex-direction: column;
-        row-gap: 30px;
-    }
-
-    .p-test {
-        width: 85%;
-        margin: auto;
-    }
-
-    /*CTA*/
-
-    .cta {
-        flex-direction: column; 
-        height: 100%;
-        padding: 60px 0px;
-        margin: auto;
-        gap: 5px;
-        background-color: #212121;
-    }
-    
-    .texto-cta { 
-        order:0;
-        width: 80%;
-        margin: auto;
-    }
-
-    .texto-cta h2 {
-        text-align: center;
-        margin: 0;
-        font-size: 35px;
-    }
-    
-    .texto-cta p {
-        font-size: 20px;
-    }
-    
-    .btn-cta { 
-        width: 90%;
-        margin: auto;
-    }
-
-    /*FOOTER*/
-
-
-    .contenedor-footer {
-        flex-direction: column; 
-        margin: auto;
-     }
-
-    
-    .company-footer {
-        width: 90%;
-        margin: auto;
-        border-right: none;
-    }
-
-    .company-footer .h2 {
-        text-align: center;
-
-    }
-
-    .company-footer p {
-        text-align: center;
-    }
-
-    .linksfooter {
-        width: 90%;
-        margin: auto;
-    }
-
-    .linksfooter .h3 {
-        color: #ff5722;
-    }
-
-    .copyright p {
-        text-align: center;
-    }
-
-    /*Contacto*/
-
-    .contenedor-contacto {
-        flex-direction: column-reverse;
-    }
-
-    .contacto {
-        padding-top: 50px;
-        width: 90%;
-        margin: auto;
-        gap: 30px;
-    }
-   
-    #contactopage .serv-card img {
-        width: 60px;
-    }
-
-    .formulario {
-        width: 90%;
-        margin: auto;
-    }
-
-    #sobre-mi .servicios-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: .8fr 3fr;
-    padding: 0;
-    margin: 0px auto;
-    }
-
-    #sobre-mi .contenedor-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    }
-
-    #sobre-mi .servicios-cta {
-        justify-content: center;
-        margin: auto;
-    }
-
-    #servicios-grid .servicios-content {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 3fr .8fr;
-        padding: 0;
-        margin: 0px auto;
-    }
-    
-    #servicios-grid .contenedor-cards {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-    
-    #servicios-grid .servicios-cta {
-        justify-content: center;
-        margin: auto;
-    }
-
-}
-
-
-
-@media (min-width:768px) and (max-width:999px) {
-    .img-hero {
-        display: none;
-    }
-    .hero-content {
-        height:850px;
-        justify-content: center;
-    }    
-
-    .hero-section {
-        flex-direction: column;
-        width: 70%;
-        margin-left: 0px;
-    }
-
-
-    .titulo-hero h1 {
-        text-align: center;
-    }
-
-    .titulo-principal span {
-        font-size: 70px;
-    }
-    
-    .btn1-content {
-
-        justify-content:center;
-    } 
-
-    .sub-hero p {
-        justify-content: center;
-        font-size:35px;
-        text-align: center;
-    }
-
-        /*Servicios*/
-
-    .servicios-head .h2 {
-        font-size: 30px;
-        width: 80%;
-        margin: 20px;
-        padding-left: 30px;
-    }
-
-    .servicios-head p {
-        font-size: 20px;
-        margin-left: 250px;
-    }
-
-    .servicios-content {
-        grid-template-columns: 1fr;
-        grid-template-rows: 3fr 1fr;
-        padding-bottom: 0px;
-    }
-
-    .contenedor-cards {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 1fr);
-    }
-
-    .servicios-cta{
-        border-radius: 10px;
-        text-align: left;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    /*PV 1-2*/
-
-    .contenidopv1 {
-        width: 40%;
-    }
-
-    .imgpv1 {
-        margin-top: 80px;
-    }
-
-    .contenidopv2 {
-        width: 40%;
-    }
-
-    .imgpv2 {
-        margin-top: 60px;
-    }
-
-    /*Portafolio */
-
-     .portafolio-content {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        padding-bottom: 0px;
-        gap:30px
-    }
-
-    .contenedor-cards2 {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-    }  
-
-    #portafoliopage .portafolio-content {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        padding-bottom: 60px;
-    }
-
-    #portafoliopage .contenedor-cards2 {
-        grid-template-columns: 1fr;
-    }
-
-    .servicios-cta {
-        justify-content: center;
-    }
-
-    .test2 {
-        flex-direction: column;
-        row-gap: 30px;
-    }
-
-    /*CTA*/
-
-    .cta {
-        flex-direction: column; 
-        height: 100%;
-        padding: 60px 0px;
-        margin: auto;
-        gap: 5px;
-        background-color: #212121;
-    }
-    
-    .texto-cta { 
-        order:0;
-        width: 80%;
-        margin: auto;
-    }
-
-    .texto-cta h2 {
-        text-align: center;
-        margin: 0;
-        font-size: 35px;
-    }
-    
-    .texto-cta p {
-        font-size: 20px;
-    }
-    
-    .btn-cta { 
-        width: 90%;
-        margin: auto;
-    }
-
-    /*FOOTER*/
-
-
-    .contenedor-footer {
-
-        flex-direction: column; 
-        justify-content: center;
-     }
-
-
-    .logofooter img {
-        width: 250px;
-        text-align: center;
-    }
-
-    .company-footer {
-        width: 90%;
-        margin: auto;
-        border-right: none;
-    }
-
-    .company-footer .h2 {
-        text-align: center;
-
-    }
-
-    .company-footer p {
-        text-align: center;
-    }
-
-    .copyright p {
-        text-align: center;
-    }
-
-    .linklist li {
-        
-        list-style:none;
-        margin-left: 0px;
-        text-align: center;
-    }
-
-    .linksfooter {
-        width: 90%;
-        margin: auto;
-    }
-
-    .linksfooter .h3 {
-        color: #ff5722
-    }
-
-    /*Contacto*/
-
-    .contenedor-contacto {
-        flex-direction: column-reverse;
-    }
-
-    .contacto {
-        padding-top: 50px;
-        width: 70%;
-        margin: auto;
-        gap: 30px;
-    }
-   
-    #contactopage .serv-card img {
-        width: 60px;
-    }
-
-    .formulario {
-        width: 70%;
-        margin: auto;
-    }
-
-    #sobre-mi .servicios-content {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: .8fr 3fr;
-        padding: 0;
-        margin: 0px auto;
-        }
-    
-    #sobre-mi .contenedor-cards {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
-    }
-    
-    #sobre-mi .servicios-cta {
-            justify-content: center;
-            margin: auto;
-    }
-
-    #servicios-grid .servicios-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 3fr .8fr;
-            padding: 0;
-            margin: 0px auto;
-    }
-        
-    #servicios-grid .contenedor-cards {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
-    }
-        
-    #servicios-grid .servicios-cta {
-            justify-content: center;
-            margin: auto;
-    }
-}
-
-@media (min-width:1000px) and (max-width:1200px){
-    
-    .hero-section h1 {
-        font-size: 60px;
-    }
-    
-    .hero-section span {
-        font-size: 60px;
-    }
-    
-    .servicios-content {
-        max-width: 1200px;
-    }
-
-    .servicios-head .h2 {
-        font-size: 38px;
-        margin-left: 80px;
-    }
-
-    .servicios-cta .btn1{
-        margin: 0px;
-    }
-
-    .servicios-head .h2 {
-        font-size: 30px;
-        width: 80%;
-        margin: 20px;
-        padding-left: 30px;
-    }
-
-    .servicios-head p {
-        font-size: 20px;
-        margin-left: 250px;
-    }
-
-    .servicios-content {
-        grid-template-columns: 1fr;
-        grid-template-rows: 3fr 1fr;
-        padding-bottom: 0px;
-    }
-
-    .contenedor-cards {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 1fr);
-    }
-
-    .servicios-cta{
-        border-radius: 10px;
-        text-align: left;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .texto-cta {
-        width: 48%;
-    }
-
-    #contactopage .serv-card p {
-        font-size: 20px;
-    }
-    
-    #contactopage .serv-card img {
-        width: 75px;
-    }
-
-    #sobre-mi .servicios-content {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: .8fr 3fr;
-        padding: 0;
-        margin: 20px auto;
-        margin-bottom: 50px;
-    }
-    
-    #sobre-mi .contenedor-cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(2, 1fr);
-    }
-    
-    #sobre-mi .servicios-cta {
-            justify-content: center;
-            margin: auto;
-    }
-
-    #servicios-grid .servicios-content {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 3fr .8fr;
-        padding: 0;
-        margin: 0px auto;
-    }
-    
-    #servicios-grid .contenedor-cards {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-    
-    #servicios-grid .servicios-cta {
-        justify-content: center;
-        margin: auto;
-    }
-}
