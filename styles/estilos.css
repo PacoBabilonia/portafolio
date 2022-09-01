@@ -41,6 +41,9 @@ p {
         font-size: 45px;
         margin: 0;
         text-shadow: 3px 3px 0px #fff; } }
+  @media (max-width: 767px) and (min-width: 768px) and (max-width: 999px) {
+    .titulo-principal span {
+      font-size: 70px; } }
   @media (max-width: 767px) {
     .titulo-principal {
       font-size: 45px;
@@ -115,6 +118,10 @@ p {
     .hero-content {
       height: 680px;
       justify-content: center; } }
+  @media (min-width: 768px) and (max-width: 999px) {
+    .hero-content {
+      height: 850px;
+      justify-content: center; } }
 
 .hero-section {
   display: flex;
@@ -130,6 +137,11 @@ p {
       margin: auto;
       margin-top: 40px;
       margin-bottom: 40px; } }
+  @media (min-width: 768px) and (max-width: 999px) {
+    .hero-section {
+      flex-direction: column;
+      width: 70%;
+      margin-left: 0px; } }
 
 .titulo-hero h1 {
   line-height: 1.2em;
@@ -137,6 +149,9 @@ p {
   text-align: left;
   color: #ffffff; }
   @media (max-width: 767px) {
+    .titulo-hero h1 {
+      text-align: center; } }
+  @media (min-width: 768px) and (max-width: 999px) {
     .titulo-hero h1 {
       text-align: center; } }
 
@@ -155,6 +170,11 @@ p {
       justify-content: center;
       font-size: 27px;
       text-align: center; } }
+  @media (min-width: 768px) and (max-width: 999px) {
+    .sub-hero p {
+      justify-content: center;
+      font-size: 35px;
+      text-align: center; } }
 
 .btn1-content {
   display: flex;
@@ -167,6 +187,9 @@ p {
   @media (max-width: 767px) {
     .btn1-content {
       justify-content: center; } }
+  @media (min-width: 768px) and (max-width: 999px) {
+    .btn1-content {
+      justify-content: center; } }
 
 .img-hero {
   width: 40%;
@@ -174,6 +197,9 @@ p {
   .img-hero img {
     width: 100%; }
   @media (max-width: 767px) {
+    .img-hero {
+      display: none; } }
+  @media (min-width: 768px) and (max-width: 999px) {
     .img-hero {
       display: none; } }
 
@@ -291,7 +317,7 @@ p {
   @media (max-width: 767px) {
     .contenedor-cards {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(6, 1fr); } }
+      grid-template-rows: repeat(3, 1fr); } }
 
 .serv-card {
   display: flex;
