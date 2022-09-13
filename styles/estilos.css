@@ -1051,26 +1051,34 @@ p span {
 
 #servicios-grid .servicios-content {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 3fr .8fr;
+  grid-template-columns: 3fr .8fr;
+  grid-template-rows: 1fr;
   padding: 0;
-  margin: 0px auto; }
-  @media (min-width: 1000px) and (max-width: 1200px) {
+  margin: 60px auto; }
+  @media (max-width: 999px) {
     #servicios-grid .servicios-content {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 3fr .8fr;
+      grid-template-rows: 3fr 1fr;
       padding: 0;
       margin: 0px auto; } }
 
 #servicios-grid .contenedor-cards {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  width: 70%;
-  margin: auto; }
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr; }
+  @media (max-width: 999px) {
+    #servicios-grid .contenedor-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      width: 70%;
+      margin: auto; } }
 
 #servicios-grid .servicios-cta {
   justify-content: center;
   margin: auto;
   width: 70%; }
+
+#servicios-grid .serv-card {
+  justify-content: center; }
