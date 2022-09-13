@@ -17,6 +17,8 @@ $tabletmax: 999px;
 $lapmin: 1000px;
 $lapmax: 1200px;
 
+/*-------MIXINS-------*/
+
 @mixin flexible($dis, $direction, $just,){
     display: $dis;
     flex-direction: $direction;
@@ -54,6 +56,8 @@ $lapmax: 1200px;
     resize: none;
     margin: 5px 0;
 }
+
+/*-----Estilos Generales-----*/
 
 html,
 body {
@@ -140,7 +144,7 @@ p {
 }
 
 
-/*Hero */ 
+/*-----Hero----- */ 
 
 .hero-content {
     @include flexible(flex, row, left);
@@ -250,7 +254,7 @@ p {
     }
 }
 
-/*Servicios*/
+/*-----Servicios-----*/
 
 .main-content {
     @include flexible(flex,column,center);
@@ -336,8 +340,9 @@ p {
 
         @media(max-width: $mobile){
             font-size: 23px;
-            margin-left: 0px;
+            margin: auto;
             text-align: center;
+            width: 85%;
         }
     }
 
@@ -405,7 +410,7 @@ p {
     margin: auto;
 }
 
-/*PV1*/
+/*-----PV1-----*/
 
 .propuesta1 {
     @include flexible(flex,row,center);
@@ -475,7 +480,7 @@ p {
 
 
 
-/* PV2 */
+/*----- PV2----- */
 
 .propuesta2 {
     @include flexible(flex,row,center);
@@ -556,7 +561,7 @@ p {
     }
 }
 
-/*Portafolio*/
+/*------Portafolio------*/
 
 
 .portafolio-content {
@@ -688,7 +693,7 @@ p {
     }
 }
 
-/* TESTIMONIALES */
+/* ------TESTIMONIALES------ */
 
 .test2{
     @include flexible(flex,row,space-around);
@@ -709,7 +714,7 @@ p {
 }
 
 
-/*CTA*/
+/*-----CTA------*/
 
 
 .cta {
@@ -786,7 +791,7 @@ p {
 }
 
 
-/*FOOTER*/
+/*------FOOTER------*/
 
 .footer {
     @include flexible(flex,column,center);
@@ -864,6 +869,10 @@ p {
         color: $gris;
         padding-bottom: 0;
         margin: 3px 0px;
+
+        @media(max-width: $mobile){
+            margin: 10px 0px;
+            }
     }
 
     p {
@@ -872,6 +881,7 @@ p {
 
         @media(max-width: $mobile){
         text-align: center;
+        margin-top: 20px;
         }
     }
 }
@@ -881,7 +891,6 @@ p {
     p {
         @include estilotexto(13px,$negro,noraml,$txt1,center);
         width: 100%;
-        margin-left: 30px;
     }
 }
 
@@ -919,7 +928,7 @@ p {
 }
 
 
-/*Contacto*/
+/*------Contacto------*/
 
 .contenedor-contacto {
     @include flexible(flex,row ,space-around )
@@ -999,6 +1008,7 @@ p {
             background: $cianclaro;
         }
     }
+
 }
 
 
@@ -1030,13 +1040,20 @@ p {
 
 }
 
-/*Sobre mí*/
 
-#sub-mi p{
+/*------Sobre mí-----*/
+
+#sub-mi 
+    p{
     padding: 0;
     margin: auto;
     width: 80%;
-    color: $naranja;
+    color: $negro;
+    font-size: 21px;
+
+    span{
+    color:$naranja;
+    }
 }
 
 #sobre-mi {

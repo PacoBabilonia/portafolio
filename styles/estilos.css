@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /*-------Variables---------*/
+/*-------MIXINS-------*/
+/*-----Estilos Generales-----*/
 html,
 body {
   padding: 0;
@@ -104,7 +106,7 @@ p {
     .btn2 {
       font-size: 14px; } }
 
-/*Hero */
+/*-----Hero----- */
 .hero-content {
   display: flex;
   flex-direction: row;
@@ -203,7 +205,7 @@ p {
     .img-hero {
       display: none; } }
 
-/*Servicios*/
+/*-----Servicios-----*/
 .main-content {
   display: flex;
   flex-direction: column;
@@ -275,8 +277,9 @@ p {
   @media (max-width: 767px) {
     .sub-serv p {
       font-size: 23px;
-      margin-left: 0px;
-      text-align: center; } }
+      margin: auto;
+      text-align: center;
+      width: 85%; } }
 
 .sub-serv h3 {
   font-size: 21px;
@@ -341,7 +344,7 @@ p {
 .icono-card {
   margin: auto; }
 
-/*PV1*/
+/*-----PV1-----*/
 .propuesta1 {
   display: flex;
   flex-direction: row;
@@ -394,7 +397,7 @@ p {
     .imgpv1 {
       text-align: center; } }
 
-/* PV2 */
+/*----- PV2----- */
 .propuesta2 {
   display: flex;
   flex-direction: row;
@@ -460,7 +463,7 @@ p {
       text-align: center;
       order: 0; } }
 
-/*Portafolio*/
+/*------Portafolio------*/
 .portafolio-content {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -569,7 +572,7 @@ p {
     text-align: center;
     padding: 0; }
 
-/* TESTIMONIALES */
+/* ------TESTIMONIALES------ */
 .test2 {
   display: flex;
   flex-direction: row;
@@ -590,7 +593,7 @@ p {
     text-align: center;
     font-style: italic; }
 
-/*CTA*/
+/*-----CTA------*/
 .cta {
   display: flex;
   flex-direction: row;
@@ -657,7 +660,7 @@ p {
       .btn-cta .btn1, .btn-cta .btn2 {
         padding: 10px 20px; } }
 
-/*FOOTER*/
+/*------FOOTER------*/
 .footer {
   display: flex;
   flex-direction: column;
@@ -734,12 +737,16 @@ p {
     color: #757575;
     padding-bottom: 0;
     margin: 3px 0px; }
+    @media (max-width: 767px) {
+      .company-footer h3 {
+        margin: 10px 0px; } }
   .company-footer p {
     font-size: 13px;
     text-align: left; }
     @media (max-width: 767px) {
       .company-footer p {
-        text-align: center; } }
+        text-align: center;
+        margin-top: 20px; } }
 
 .copyright p {
   font-size: 13px;
@@ -747,8 +754,7 @@ p {
   font-weight: noraml;
   font-family: "Poppins", sans-serif;
   text-align: center;
-  width: 100%;
-  margin-left: 30px; }
+  width: 100%; }
 
 .linklist li {
   text-align: center; }
@@ -773,7 +779,7 @@ p {
       .linksfooter .h3 {
         font-size: 22px; } }
 
-/*Contacto*/
+/*------Contacto------*/
 .contenedor-contacto {
   display: flex;
   flex-direction: row;
@@ -877,12 +883,17 @@ p {
   flex: 1;
   background-color: #e2e2e2; }
 
-/*Sobre mí*/
-#sub-mi p {
+/*------Sobre mí-----*/
+#sub-mi
+p {
   padding: 0;
   margin: auto;
   width: 80%;
-  color: #ff5722; }
+  color: #212121;
+  font-size: 21px; }
+  #sub-mi
+p span {
+    color: #ff5722; }
 
 #sobre-mi .servicios-cta {
   justify-content: center; }
